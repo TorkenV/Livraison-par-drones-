@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+    <n>Map 8 Central Obstacles, Opposed Routes on the Left</n>
+    <description>
+        2 obstacles au centre bloquent la trajectoire directe start-goal.
+        2 routes paralleles a gauche de sens opposes :
+        Route Gauche Nord : sens Sud vers Nord (y croissant)
+        Route Gauche Sud  : sens Nord vers Sud (y decroissant)
+        Le drone doit contourner par la gauche et prendre
+        la route dans le bon sens pour atteindre le goal.
+        Start en bas, Goal en haut.
+    </description>
+    <scenario_id>8</scenario_id>
+
+    <!--
+        Espace : x: -150->300, y: -50->500
+        Start en bas centre, Goal en haut centre
+        Les obstacles bloquent le passage direct
+    -->
+    <mission>
+        <start>
+            <x>100</x>
+            <y>0</y>
+            <z>50</z>
+        </start>
+        <goal>
+            <x>100</x>
+            <y>450</y>
+            <z>50</z>
+        </goal>
+    </mission>
+
+    <!--
+        2 routes a gauche des obstacles, paralleles sur x=-80 et x=-30
+        Route Gauche Nord : sens y croissant (Sud vers Nord) -> bon sens pour aller au goal
+        Route Gauche Sud  : sens y decroissant (Nord vers Sud) -> contre-sens
+        Routes de y=20 a y=430 pour laisser du vol libre au debut et a la fin
+        Width = 40m
+    -->
+    <airways>
+
+        <airway>
+            <n>Route Gauche Nord</n>
+            <type>mandatory</type>
+            <waypoint_start>
+                <x>-80</x>
+                <y>430</y>
+                <z>50</z>
+            </waypoint_start>
+            <waypoint_end>
+                <x>-80</x>
+                <y>20</y>
+                <z>50</z>
+            </waypoint_end>
+            <width>40</width>
+            <altitude_min>20</altitude_min>
+            <altitude_max>80</altitude_max>
+        </airway>
+
+        <airway>
+            <n>Route Gauche Sud</n>
+            <type>mandatory</type>
+            <waypoint_start>
+                <x>-30</x>
+                <y>20</y>
+                <z>50</z>
+            </waypoint_start>
+            <waypoint_end>
+                <x>-30</x>
+                <y>430</y>
+                <z>50</z>
+            </waypoint_end>
+            <width>40</width>
+            <altitude_min>20</altitude_min>
+            <altitude_max>80</altitude_max>
+        </airway>
+
+    </airways>
+
+    <!--
+        2 grands obstacles au centre bloquant la trajectoire directe
+        Batiment A : bas centre
+        Batiment B : haut centre
+    -->
+    <obstacles>
+
+        <obstacle>
+            <n>Batiment A</n>
+            <center>
+                <x>100</x>
+                <y>150</y>
+                <z>50</z>
+            </center>
+            <dimensions>
+                <width>160</width>
+                <depth>100</depth>
+                <height>100</height>
+            </dimensions>
+        </obstacle>
+
+        <obstacle>
+            <n>Batiment B</n>
+            <center>
+                <x>100</x>
+                <y>320</y>
+                <z>50</z>
+            </center>
+            <dimensions>
+                <width>160</width>
+                <depth>100</depth>
+                <height>100</height>
+            </dimensions>
+        </obstacle>
+
+    </obstacles>
+
+</map>

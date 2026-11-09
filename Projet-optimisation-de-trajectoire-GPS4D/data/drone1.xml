@@ -1,0 +1,16 @@
+<drone>
+    <name>Drone alpha</name>
+    <description>Drone de livraison de pizza - INSA Toulouse</description>
+
+    <cruise_speed>10.0</cruise_speed>
+    <max_speed>15.0</max_speed>
+
+    <max_acceleration>2.0</max_acceleration>
+    <max_deceleration>2.5</max_deceleration>
+
+    <mass_empty>5.0</mass_empty>
+    <mass_loaded>6.0</mass_loaded>
+
+    <altitude_min>20.0</altitude_min>
+    <altitude_max>120.0</altitude_max>
+</drone>

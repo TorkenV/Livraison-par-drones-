@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+    <n>Map 7 - Airway with opposed direction</n>
+    <description>
+        Une seule route aérienne, dans le sens Est vers Ouest (x décroissant).
+    </description>
+    <scenario_id>7</scenario_id>
+
+    <!-- Start et goal au sol : le drone doit monter avant d'entrer dans une route -->
+    <mission>
+        <start>
+            <x>0</x>
+            <y>0</y>
+            <z>20</z>
+        </start>
+        <goal>
+            <x>500</x>
+            <y>0</y>
+            <z>20</z>
+        </goal>
+    </mission>
+    <airways>
+
+
+        <airway>
+            <n>Route Centrale</n>
+            <type>mandatory</type>
+            <waypoint_start>
+                <x>420</x>
+                <y>0</y>
+                <z>20</z>
+            </waypoint_start>
+            <waypoint_end>
+                <x>80</x>
+                <y>0</y>
+                <z>20</z>
+            </waypoint_end>
+            <width>60</width>
+        </airway>
+
+    </airways>
+
+    <obstacles>
+    </obstacles>
+
+</map>

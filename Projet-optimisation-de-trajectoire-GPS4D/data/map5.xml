@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+    <n>Map 5 Parallel Airways </n>
+    <description>
+        3 routes aériennes parallèles (axe X), sens Ouest vers Est.
+        Le drone navigue librement avant d'entrer dans un couloir
+        et après en être sorti. Pas d'obstacle.
+    </description>
+    <scenario_id>5</scenario_id>
+
+    <!-- Start et goal au sol : le drone doit monter avant d'entrer dans une route -->
+    <mission>
+        <start>
+            <x>0</x>
+            <y>0</y>
+            <z>20</z>
+        </start>
+        <goal>
+            <x>500</x>
+            <y>0</y>
+            <z>20</z>
+        </goal>
+    </mission>
+
+    <!--
+        3 routes parallèles, toutes dans le sens x croissant (Ouest -> Est).
+        Elles commencent a x=80 et finissent a x=420 :
+          80m de vol libre au depart avant d'entrer dans un couloir
+          80m de vol libre a l'arrivee apres etre sorti du couloir
+        Width = 20m
+        Route Nord     : y = +80
+        Route Centrale : y = 0
+        Route Sud      : y = -80
+    -->
+    <airways>
+
+        <airway>
+            <n>Route Nord</n>
+            <type>mandatory</type>
+            <waypoint_start>
+                <x>80</x>
+                <y>80</y>
+                <z>20</z>
+            </waypoint_start>
+            <waypoint_end>
+                <x>420</x>
+                <y>80</y>
+                <z>20</z>
+            </waypoint_end>
+            <width>60</width>
+
+        </airway>
+
+        <airway>
+            <n>Route Centrale</n>
+            <type>mandatory</type>
+            <waypoint_start>
+                <x>80</x>
+                <y>0</y>
+                <z>20</z>
+            </waypoint_start>
+            <waypoint_end>
+                <x>420</x>
+                <y>0</y>
+                <z>20</z>
+            </waypoint_end>
+            <width>60</width>
+        </airway>
+
+        <airway>
+            <n>Route Sud</n>
+            <type>mandatory</type>
+            <waypoint_start>
+                <x>80</x>
+                <y>-80</y>
+                <z>20</z>
+            </waypoint_start>
+            <waypoint_end>
+                <x>420</x>
+                <y>-80</y>
+                <z>20</z>
+            </waypoint_end>
+            <width>60</width>
+        </airway>
+
+    </airways>
+
+    <obstacles>
+    </obstacles>
+
+</map>

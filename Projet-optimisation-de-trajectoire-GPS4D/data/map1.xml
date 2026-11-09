@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+    <name>Map 1 - Ligne droite</name>
+    <description>Cas 1 : trajet direct A vers B sans obstacle</description>
+    <scenario_id>1</scenario_id>
+
+    <mission>
+        <start>
+            <x>0</x>
+            <y>0</y>
+            <z>0</z>
+        </start>
+        <goal>
+            <x>500</x>
+            <y>0</y>
+            <z>0</z>
+        </goal>
+    </mission>
+
+    <obstacles>
+        <!-- Aucun obstacle -->
+    </obstacles>
+</map>

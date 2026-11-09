@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+    <name>Map 4 - Slalom + obstacle bas</name>
+    <description>Cas 4 : comme map3 mais avec un obstacle bas, le drone doit passer par-dessus (test axe Z)</description>
+    <scenario_id>4</scenario_id>
+
+    <mission>
+        <start>
+            <x>0</x>
+            <y>0</y>
+            <z>0</z>
+        </start>
+        <goal>
+            <x>500</x>
+            <y>0</y>
+            <z>0</z>
+        </goal>
+    </mission>
+
+    <obstacles>
+        <obstacle>
+            <name>Tour A</name>
+            <center>
+                <x>150</x>
+                <y>-20</y>
+                <z>20</z>
+            </center>
+            <dimensions>
+                <width>100</width>
+                <depth>100</depth>
+                <height>40</height>
+            </dimensions>
+        </obstacle>
+
+        <obstacle>
+            <name>Tour B</name>
+            <center>
+                <x>300</x>
+                <y>20</y>
+                <z>40</z>
+            </center>
+            <dimensions>
+                <width>100</width>
+                <depth>100</depth>
+                <height>160</height>
+            </dimensions>
+        </obstacle>
+
+        <obstacle>
+            <name>Tour C</name>
+            <center>
+                <x>420</x>
+                <y>-20</y>
+                <z>20</z>
+            </center>
+            <dimensions>
+                <width>100</width>
+                <depth>100</depth>
+                <height>40</height>
+            </dimensions>
+        </obstacle>
+
+    </obstacles>
+</map>

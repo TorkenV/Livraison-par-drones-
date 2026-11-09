@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+    <n>Map 6 Airways in a T-shape with obstacles</n>
+    <description>
+        2 routes en T :
+        Route Horizontale : sens Ouest vers Est (x croissant)
+        Route Verticale   : sens Nord vers Sud (y decroissant)
+        2 obstacles bloquant la trajectoire directe start-goal.
+        Start en haut a gauche, Goal en bas au centre.
+    </description>
+    <scenario_id>6</scenario_id>
+
+    <!--
+        Espace : x: 0->400, y: -100->250, z: 0->150
+        Start en haut a gauche, Goal en bas centre
+    -->
+    <mission>
+        <start>
+            <x>30</x>
+            <y>200</y>
+            <z>50</z>
+        </start>
+        <goal>
+            <x>220</x>
+            <y>-60</y>
+            <z>50</z>
+        </goal>
+    </mission>
+
+    <!--
+        Route Horizontale : y=120, x: 20->380, sens -> (x croissant)
+        Route Verticale   : x=220, y: 120->-80, sens v (y decroissant)
+        Intersection en (220, 120)
+        Width = 50m
+    -->
+    <airways>
+
+        <airway>
+            <n>Route Horizontale</n>
+            <type>mandatory</type>
+            <waypoint_start>
+                <x>20</x>
+                <y>120</y>
+                <z>50</z>
+            </waypoint_start>
+            <waypoint_end>
+                <x>380</x>
+                <y>120</y>
+                <z>50</z>
+            </waypoint_end>
+            <width>50</width>
+            <altitude_min>20</altitude_min>
+            <altitude_max>80</altitude_max>
+        </airway>
+
+        <airway>
+            <n>Route Verticale</n>
+            <type>mandatory</type>
+            <waypoint_start>
+                <x>220</x>
+                <y>120</y>
+                <z>50</z>
+            </waypoint_start>
+            <waypoint_end>
+                <x>220</x>
+                <y>-80</y>
+                <z>50</z>
+            </waypoint_end>
+            <width>50</width>
+            <altitude_min>20</altitude_min>
+            <altitude_max>80</altitude_max>
+        </airway>
+
+    </airways>
+
+    <!--
+        Obstacle Horizontal : barre large bloquant le passage direct en haut
+        Obstacle Vertical   : bloc bloquant le passage direct a gauche
+        Dimensions calibrees pour etre visibles sans deborder
+    -->
+    <obstacles>
+
+        <obstacle>
+            <n>Obstacle Horizontal</n>
+            <center>
+                <x>220</x>
+                <y>165</y>
+                <z>50</z>
+            </center>
+            <dimensions>
+                <width>260</width>
+                <depth>40</depth>
+                <height>80</height>
+            </dimensions>
+        </obstacle>
+
+        <obstacle>
+            <n>Obstacle Vertical</n>
+            <center>
+                <x>100</x>
+                <y>60</y>
+                <z>50</z>
+            </center>
+            <dimensions>
+                <width>40</width>
+                <depth>120</depth>
+                <height>80</height>
+            </dimensions>
+        </obstacle>
+
+    </obstacles>
+
+</map>
